@@ -1,0 +1,37 @@
+@model List<empresa.Models.Empresa>
+
+
+
+
+<h2>Voce está na pagina de empresas</h2>
+
+
+<h5>Detalhes das empresas</h5>
+
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Endreço</th>
+            <th scope="col">Desconto</th>
+            <th scope="col">RegimeF</th>
+            <th scope="col">Cnpj</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach(var empresa in Model){
+                <tr>
+                    <th scope="row">@empresa.Id</th>
+                    <td>@empresa.Nome</td>
+                    <td>@empresa.Endereço</td>
+                    <td>@empresa.Desconto</td>
+                    <td>R$ @empresa.RegimeF</td>
+                    <td>R$ @empresa.Cnpj</td>
+                </tr>
+            }
+        }
+    </tbody>
+  </table>
